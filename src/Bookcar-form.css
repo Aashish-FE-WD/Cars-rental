@@ -1,0 +1,17 @@
+body {
+  background-color: #000000;
+
+}
+
+form label i {
+  margin-right: 5px;
+}
+
+.btn-danger {
+  background-color:darkred;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: darkred;
+}
