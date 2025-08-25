@@ -32,7 +32,7 @@ function BookCarForm ()  {
         </div>
 
         {/* Drop-off */}
-        <div className="col-12 col-md-4">
+        <div className="col-12     col-md-4">
           <label className="form-label">
             <i className="bi bi-geo-alt text-danger"></i> Drop-off
           </label>
