@@ -56,7 +56,7 @@ function BookCarForm ()  {
           <label className="form-label">
             <i className="bi bi-calendar-date text-danger"></i> Drop-off
           </label>
-          <input type="date" className="form-control" />
+          <input type="date"  className="form-control" />
         </div>
 
         {/* Search Button */}
