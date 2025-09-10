@@ -3,7 +3,7 @@ import './Bookcar-form.css';
 function BookCarForm ()  {
   return (
     <>
-    <section className="container my-5 p-4 shadow-lg rounded border border-danger rounded bs-secondary-color text-white bs-danger-border" id='Bookcar-form'>
+    <section className="container my-5 p-4 shadow-lg  border-danger rounded bs-secondary-color text-white bg-danger" id='Bookcar-form'>
       <h4 className="mb-4">Book a car</h4>
       <form className="row g-3 align-items-end">
         {/* Car Type */}

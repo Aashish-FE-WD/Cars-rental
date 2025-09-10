@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Home from './Home';
-import Booking from './Booking';
+import MyBooking from './MyBooking';
 import Cars from './Cars';
 import About from './About';
 import Blog from './Blog';
@@ -51,20 +51,14 @@ handlePageChange = (pageName) =>{
                     </li> &nbsp;
 
                     <li className="nav-item">
-                      <a className="nav-link" href="#" onClick={() => this.handlePageChange('Booking')}>Booking</a>
+                      <a className="nav-link" href="#" onClick={() => this.handlePageChange('MyBooking')}>MyBooking</a>
                     </li> &nbsp;
 
                     <li className="nav-item dropdown">
-                      <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => this.handlePageChange('Cars')}>
+                      <a className="nav-link" href="#"  aria-expanded="false" onClick={() => this.handlePageChange('Cars')}>
                         cars
                       </a> 
 
-                      <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#" onClick={() => this.handlePageChange('a')}>a</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => this.handlePageChange('b')}>B</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => this.handlePageChange('c')}>C</a></li>
-                        
-                      </ul>
                     </li> &nbsp;
 
                     <li className="nav-item">
@@ -88,10 +82,10 @@ handlePageChange = (pageName) =>{
                 </div>
             </nav>  
                {currentPage === 'Home' && <Home></Home>}          
-               {currentPage === 'Book98ing' && <Booking></Booking>}
-               {currentPage === 'Cars' && <cars></cars>}
+               {currentPage === 'MyBooking' && <MyBooking></MyBooking>}
+               {currentPage === 'Cars' && <Cars></Cars>}
                 {currentPage === 'About' && <About></About>}
-                 {currentPage === 'Blog' && <blog></blog>}
+                 {currentPage === 'Blog' && <Blog></Blog>}
                   {currentPage === 'Contacts' && <Contact></Contact>}
             </> 
    
