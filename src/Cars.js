@@ -26,7 +26,7 @@ const Cars = () => {
 
        {/* Features Section */}
       <section className="py-5">
-        <div className="container py-5">
+         <div className="container py-5">
           <div className="row g-4">
             {/* Feature 1 */}
             <div className="col-md-4">
