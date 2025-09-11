@@ -6,8 +6,8 @@ import About from './About';
 import Blog from './Blog';
 import Contact from './Contact';
 import logo from './image/logo11.png';
+import './BookCar-form.css';
 
-// import Menu from './nav-menu.js';
 
 class Header extends Component{
   
@@ -87,6 +87,7 @@ handlePageChange = (pageName) =>{
                 {currentPage === 'About' && <About></About>}
                  {currentPage === 'Blog' && <Blog></Blog>}
                   {currentPage === 'Contacts' && <Contact></Contact>}
+            
             </> 
    
 
