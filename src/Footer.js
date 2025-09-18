@@ -24,8 +24,8 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="footer-section">
           <h4>Contact</h4>
-          <p>Email: support@driveeasy.com</p>
-          <p>Phone: +91 98765 43210</p>
+          <p>Email: support@CarsRentals.com</p>
+          <p>Phone: +91 9509969932</p>
           <p>Location: Mumbai, India</p>
         </div>
 
@@ -33,9 +33,9 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Follow Us</h4>
           <div className="social-icons">
-            <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
-            <a href="https://twitter.com"><i className="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/aashishdodiya/"><i className="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/as_hi_sh_77/"><i className="fab fa-instagram"></i></a>
+            <a href="https://x.com/AshishDodiya77"><i className="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
