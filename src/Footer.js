@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} DriveEasy Rentals. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} DriveEasy With Cars-Rentals. Made ❤ by Aashish All rights reserved.</p>
       </div>
     </footer>
   );
