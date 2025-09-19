@@ -24,7 +24,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="footer-section">
           <h4>Contact</h4>
-          <p>Email: support@CarsRentals.com</p>
+          <p>Email: ashu@CarsRentals.com</p>
           <p>Phone: +91 9509969932</p>
           <p>Location: Mumbai, India</p>
         </div>
