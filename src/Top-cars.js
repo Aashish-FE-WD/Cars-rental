@@ -1,107 +1,4 @@
-
-// import React, { useState } from "react";
-// import car1 from "./image/card1.png";
-// import car2 from "./image/card2.png";
-// import car3 from "./image/card3.png";
-// import car4 from "./image/card4.png";
-// import car5 from "./image/card5.png";
-// import car6 from "./image/card6.png";
-// import car7 from "./image/card7.png";
-// import car8 from "./image/card8.png";
-// import car9 from "./image/card9.png";
-
-// // Sample car data
-// const cars = [
-//   { id: 1, name: "Audi R8", description: "Electric luxury sedan with high performance.", image: car1 },
-//   { id: 2, name: "BMW M4", description: "High-performance coupe with sporty design.", image: car4 },
-//   { id: 3, name: "Wollongong", description: "Supercar with powerful V10 engine.", image: car3 },
-//   { id: 4, name: "Ferrari 458", description: "Electric luxury sedan with high performance.", image: car9 },
-//   { id: 5, name: "Swift", description: "High-performance coupe with sporty design.", image: car5 },
-//   { id: 6, name: "Hyundai", description: "Supercar with powerful V10 engine.", image: car6 },
-//   { id: 7, name: "Ferrari F8 Tributo", description: "Electric luxury sedan with high performance.", image: car7 },
-//   { id: 8, name: "ROLLS ROYCE", description: "High-performance coupe with sporty design.", image: car8 },
-//   { id: 9, name: "RANGE ROVER", description: "Supercar with powerful V10 engine.", image: car2 },
-// ];
-
-// function Top_Cars() {
-//   const [selectedCar, setSelectedCar] = useState(null);
-
-//   const handleViewDetails = (car) => {
-//     setSelectedCar(car);
-//     const modal = new window.bootstrap.Modal(document.getElementById("carModal"));
-//     modal.show();
-//   };
-
-//   return (
-//     <div className="container my-5">
-//       <h2 className="text-center mb-4 text-white">Top Cars</h2>
-//       <div className="row">
-//         {cars.map((car) => (
-//           <div className="col-md-4 mb-4" key={car.id}>
-//             <div className="card h-100 shadow-sm bg-dark">
-//               <img src={car.image} className="card-img-top" alt={car.name} />
-//               <div className="card-body text-light">
-//                 <h5 className="card-title">{car.name}</h5>
-//                 <p className="card-text">{car.description}</p>
-//                 <button
-//                   className="btn btn-secondary"
-//                   onClick={() => handleViewDetails(car)}
-//                 >
-//                   View Details
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-
-//       {/* Modal */}
-//       <div className="modal fade" id="carModal" tabIndex="-1" aria-hidden="true">
-//         <div className="modal-dialog modal-dialog-centered">
-//           <div className="modal-content bg-dark text-light">
-//             <div className="modal-header">
-//               <h5 className="modal-title">{selectedCar?.name}</h5>
-//               <button
-//                 type="button"
-//                 className="btn-close btn-close-white"
-//                 data-bs-dismiss="modal"
-//                 aria-label="Close"
-//               ></button>
-//             </div>
-//             <div className="modal-body text-center">
-//               {selectedCar && (
-//                 <>
-//                   <img
-//                     src={selectedCar.image}
-//                     alt={selectedCar.name}
-//                     className="img-fluid mb-3"
-//                     style={{ maxHeight: "200px" }}
-//                   />
-//                   <p>{selectedCar.description}</p>
-//                 </>
-//               )}
-//             </div>
-//             <div className="modal-footer">
-//               <button
-//                 type="button"
-//                 className="btn btn-secondary"
-//                 data-bs-dismiss="modal"
-//               >
-//                 Close
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Top_Cars;
-
-
-
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import car1 from "./image/card1.png";
 import car2 from "./image/card2.png";
 import car3 from "./image/card3.png";
@@ -125,10 +22,9 @@ const cars = [
   { id: 9, name: "RANGE ROVER", description: "Supercar with powerful V10 engine.", image: car2 },
 ];
 
-function Top_Cars() {
+function TopCars() {
   const [currentCarIndex, setCurrentCarIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(true);
-  const autoPlayRef = useRef();
 
   const goToNext = () => {
     setFadeIn(false);
@@ -154,20 +50,19 @@ function Top_Cars() {
     }, 300);
   };
 
-  useEffect(() => {
-    setFadeIn(true);
+  // Removed handleBookCar and navigate
 
-    // Keyboard arrow navigation
+  useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "ArrowRight") goToNext();
       else if (e.key === "ArrowLeft") goToPrev();
     };
-    window.addEventListener("keydown", handleKeyDown);
 
+    window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
- const currentCar = cars[currentCarIndex];
+  const currentCar = cars[currentCarIndex];
 
   return (
     <div className="container my-5">
@@ -175,7 +70,10 @@ function Top_Cars() {
       <div className="row justify-content-center align-items-center">
         {/* Left Image */}
         <div className="col-md-6">
-          <div className={`fadeInOutEffect ${fadeIn ? "fadeIn" : "fadeOut"}`} style={{ transition: "opacity 0.5s" }}>
+          <div
+            className={`fadeInOutEffect ${fadeIn ? "fadeIn" : "fadeOut"}`}
+            style={{ transition: "opacity 0.5s" }}
+          >
             <img
               src={currentCar.image}
               className="img-fluid"
@@ -187,25 +85,22 @@ function Top_Cars() {
 
         {/* Right Info */}
         <div className="col-md-6">
-          <div
-            className="card shadow-sm bg-dark text-light"
-           
-          >
+          <div className="card shadow-sm bg-dark text-light">
             <div className="card-body">
               <h5 className="card-title">{currentCar.name}</h5>
               <p className="card-text">{currentCar.description}</p>
 
               <div className="d-flex justify-content-between mb-3">
                 <button className="btn btn-outline-light" onClick={goToPrev}>
-                  ◀ Back Car
+                  ◀
                 </button>
                 <button className="btn btn-secondary" onClick={goToNext}>
-                  Next Car ▶
+                  ▶
                 </button>
               </div>
 
               {/* Dot Navigation */}
-              <div className="text-center">
+              <div className="text-center mb-3">
                 {cars.map((_, index) => (
                   <span
                     key={index}
@@ -215,7 +110,8 @@ function Top_Cars() {
                       height: "12px",
                       width: "12px",
                       margin: "0 4px",
-                      backgroundColor: index === currentCarIndex ? "white" : "#888",
+                      backgroundColor:
+                        index === currentCarIndex ? "white" : "#888",
                       borderRadius: "50%",
                       display: "inline-block",
                       transition: "background-color 0.3s",
@@ -223,6 +119,8 @@ function Top_Cars() {
                   ></span>
                 ))}
               </div>
+
+              {/* Removed Book Car Button */}
             </div>
           </div>
         </div>
@@ -231,4 +129,4 @@ function Top_Cars() {
   );
 }
 
-export default Top_Cars;
+export default TopCars;
