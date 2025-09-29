@@ -29,7 +29,7 @@ const MyBooking = ({ car }) => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
+      setTimeout(() => {
       setIsSubmitting(false);
       setConfirmationMessage(`Booking for ${car?.name} confirmed!`);
       // No navigation, no redirect
