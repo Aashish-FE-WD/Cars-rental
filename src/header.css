@@ -7,7 +7,7 @@
   color: whitesmoke;
 }
 .nav-item :hover{
-  background-color: #ed0d0d;
+    background-color: #ed0d0d;
   cursor: pointer;
   color: aliceblue;
   border-radius: 20%;
