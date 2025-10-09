@@ -3,10 +3,10 @@ import Home from './Home';
 import MyBooking from './MyBooking';
 import Cars from './Cars';
 import About from './About';
-import Blog from './Blog';
 import Contact from './Contact';
 import logo from './image/logo11.png';
 import './BookCar-form.css';
+
 
 
 class Header extends Component{
@@ -65,10 +65,7 @@ handlePageChange = (pageName) =>{
                       <a className="nav-link" href='#' onClick={() => this.handlePageChange('About')}>About</a>
                     </li> &nbsp;
 
-                    <li className="nav-item">
-                      <a className="nav-link" href='#' onClick={() => this.handlePageChange('Blog')}>Blog</a>
-                    </li> &nbsp;
-
+               
                     <li className="nav-item">
                       <a className="nav-link" href='#' onClick={() => this.handlePageChange('Contact')}>Contact</a>
 
@@ -85,8 +82,7 @@ handlePageChange = (pageName) =>{
                {currentPage === 'MyBooking' && <MyBooking></MyBooking>}
                {currentPage === 'Cars' && <Cars></Cars>}
                 {currentPage === 'About' && <About></About>}
-                 {currentPage === 'Blog' && <Blog></Blog>}
-                  {currentPage === 'Contacts' && <Contact></Contact>}
+                {currentPage === 'Contacts' && <Contact></Contact>}
             
             </> 
    
