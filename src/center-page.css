@@ -1,7 +1,7 @@
 /* Default background (desktop) */
 #menu {
     position: relative;
-    background: url('C:\Users\Aashish\OneDrive\Documents\Desktop\React\webpage\src\image\bg1234.webp') center/cover no-repeat;
+   background: url('../image/bg1234.webp') center/cover no-repeat;
     min-height: 629px; /* desktop height */
     text-align: center;
     overflow: hidden;
@@ -32,7 +32,7 @@
 @media (max-width: 767px) {
     #menu {
         min-height: 629px;
-         background: url('C:\Users\Aashish\OneDrive\Documents\Desktop\React\webpage\src\image\bg1234.webp') center/cover no-repeat;
+        background: url('../image/bg1234.webp') center/cover no-repeat;
    
         background-position: center top;
     }
