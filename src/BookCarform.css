@@ -1,17 +1,47 @@
 body {
-  background-color: #000000;
-
+  background-color: #000;
 }
 
+/* Main form wrapper */
+.bookcar-wrapper {
+  background: #111;
+  border: 1px solid #b30000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Label icons */
 form label i {
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
+/* Inputs - dark theme */
+.dark-input {
+  background: #1b1b1b;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.dark-input:focus {
+  background: #222;
+  border-color: #b30000;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+  color: #fff;
+}
+
+/* Button */
 .btn-danger {
-  background-color:darkred;
+  background-color: #b30000;
   border: none;
+  transition: 0.2s ease-in-out;
 }
 
 .btn-danger:hover {
-  background-color: darkred;
+  background-color: #cc0000;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .bookcar-wrapper {
+    padding: 20px;
+  }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./BookCarForm.css";
 
 function BookCarForm() {
   const navigate = useNavigate();
@@ -19,40 +20,39 @@ function BookCarForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Save booking data to localStorage (temporary memory)
     localStorage.setItem("bookingData", JSON.stringify(formData));
-
-    // Redirect to booking summary page
     navigate("/my-booking");
   };
 
   return (
     <section
-      className="container my-5 p-4 border shadow-lg border-danger rounded text-white bg-black"
+      className="bookcar-wrapper container my-5 p-4 rounded text-white"
       id="Bookcar-form"
     >
-      <h4 className="mb-4 text-danger">Book a Car</h4>
-      <form className="row g-3 align-items-end" onSubmit={handleSubmit}>
+      <h3 className="mb-4 text-danger fw-bold">Book a Car</h3>
+
+      <form className="row g-4 align-items-end" onSubmit={handleSubmit}>
+        
         {/* Car Type */}
         <div className="col-12 col-md-4">
           <label className="form-label">
-            <i className="bi bi-car-front text-danger"></i> Select Your Car Type
+            <i className="bi bi-car-front text-danger"></i> Select Car Type
           </label>
           <select
-            className="form-select"
+            className="form-select dark-input"
             name="carType"
             value={formData.carType}
             onChange={handleChange}
             required
           >
-            <option value="">Select your car type</option>
+            <option value="">Select car type</option>
             <option value="SUV">SUV</option>
             <option value="Sedan">Sedan</option>
             <option value="Hatchback">Hatchback</option>
           </select>
         </div>
 
-        {/* Pick-up */}
+        {/* Pickup */}
         <div className="col-12 col-md-4">
           <label className="form-label">
             <i className="bi bi-geo-alt text-danger"></i> Pick-up
@@ -60,7 +60,7 @@ function BookCarForm() {
           <input
             type="text"
             name="pickup"
-            className="form-control"
+            className="form-control dark-input"
             placeholder="Worli"
             value={formData.pickup}
             onChange={handleChange}
@@ -68,7 +68,7 @@ function BookCarForm() {
           />
         </div>
 
-        {/* Drop-off */}
+        {/* Dropoff */}
         <div className="col-12 col-md-4">
           <label className="form-label">
             <i className="bi bi-geo-alt text-danger"></i> Drop-off
@@ -76,7 +76,7 @@ function BookCarForm() {
           <input
             type="text"
             name="dropoff"
-            className="form-control"
+            className="form-control dark-input"
             placeholder="Dadar"
             value={formData.dropoff}
             onChange={handleChange}
@@ -84,39 +84,39 @@ function BookCarForm() {
           />
         </div>
 
-        {/* Pick-up Date */}
+        {/* Pickup Date */}
         <div className="col-12 col-md-3">
           <label className="form-label">
-            <i className="bi bi-calendar-date text-danger"></i> Pick-up
+            <i className="bi bi-calendar-date text-danger"></i> Pickup Date
           </label>
           <input
             type="date"
             name="pickupDate"
-            className="form-control"
+            className="form-control dark-input"
             value={formData.pickupDate}
             onChange={handleChange}
             required
           />
         </div>
 
-        {/* Drop-off Date */}
+        {/* Dropoff Date */}
         <div className="col-12 col-md-3">
           <label className="form-label">
-            <i className="bi bi-calendar-date text-danger"></i> Drop-off
+            <i className="bi bi-calendar-date text-danger"></i> Drop-off Date
           </label>
           <input
             type="date"
             name="dropoffDate"
-            className="form-control"
+            className="form-control dark-input"
             value={formData.dropoffDate}
             onChange={handleChange}
             required
           />
         </div>
 
-        {/* Search Button */}
+        {/* Button */}
         <div className="col-12 col-md-3 d-grid">
-          <button type="submit" className="btn btn-danger mt-4">
+          <button type="submit" className="btn btn-danger mt-4 fw-bold">
             Book Now
           </button>
         </div>
@@ -126,5 +126,3 @@ function BookCarForm() {
 }
 
 export default BookCarForm;
-
-
