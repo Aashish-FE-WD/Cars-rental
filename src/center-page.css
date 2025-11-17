@@ -42,7 +42,8 @@
 @media (max-width: 425px) {
     #menu {
         min-height: 300px;
-        background: url('C:\Users\Aashish\OneDrive\Documents\Desktop\React\webpage\src\image\bg1234.webp') center/cover no-repeat;
+      background: url('../image/bg1234.webp') center/cover no-repeat;
+
     }
 }
 
