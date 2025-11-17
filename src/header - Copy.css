@@ -1,0 +1,17 @@
+.nav-item {
+  background-color:#acacac;
+  border-radius: 20%;
+  text-align: center;
+}
+.container h3{
+  color: whitesmoke;
+}
+.nav-item :hover{
+    background-color: #ed0d0d;
+  cursor: pointer;
+  color: aliceblue;
+  border-radius: 20%;
+}
+.custom-navbar {
+  background-color: #000000; /* Orange */
+}

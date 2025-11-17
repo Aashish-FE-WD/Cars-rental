@@ -1,0 +1,16 @@
+.fadeInOutEffect {
+  opacity: 0;
+}
+.fadeIn {
+  opacity: 1 !important;
+}
+.fadeOut {
+  opacity: 0 !important;
+}
+
+.slideInRight {
+  transform: translateX(100%);
+}
+.slideIn {
+  transform: translateX(0) !important;
+}

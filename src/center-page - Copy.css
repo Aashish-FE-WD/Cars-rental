@@ -1,0 +1,106 @@
+/* Default background (desktop) */
+#menu {
+    position: relative;
+    background: url('C:\Users\Aashish\OneDrive\Documents\Desktop\React\webpage\src\image\bg1234.webp') center/cover no-repeat;
+    min-height: 629px; /* desktop height */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Overlay for better text readability */
+#menu .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Ensure content stays above overlay */
+#menu .row {
+    position: relative;
+    z-index: 2;
+}
+
+
+@media (max-width: 1024px) {
+    #menu {
+        min-height: 629px;
+        background-position: center top;
+    }
+}
+/* Tablet adjustments */
+@media (max-width: 767px) {
+    #menu {
+        min-height: 629px;
+         background: url('C:\Users\Aashish\OneDrive\Documents\Desktop\React\webpage\src\image\bg1234.webp') center/cover no-repeat;
+   
+        background-position: center top;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 425px) {
+    #menu {
+        min-height: 300px;
+        background: url('C:\Users\Aashish\OneDrive\Documents\Desktop\React\webpage\src\image\bg1234.webp') center/cover no-repeat;
+    }
+}
+
+/* Text styles */
+#menu h2 {
+    font-family: 'Cookie', cursive;
+    color: #fff;
+}
+
+#menu h2 span {
+    color: red;
+    text-decoration: underline;
+}
+
+#menu p {
+    color: whitesmoke;
+    font-family: 'Cookie', cursive;
+}
+
+/* Button */
+#menu button {
+    font-family: 'Arima', cursive;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu button:hover {
+    transform: scale(1.05);
+    background-color: darkred;
+}
+
+/* Smooth animations */
+.animate-text {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fade-scale-in 1.2s ease forwards;
+}
+
+.animate-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-up-in 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fade-scale-in {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-up-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
