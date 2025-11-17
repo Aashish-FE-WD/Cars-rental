@@ -2,7 +2,7 @@
   "name": "webpage",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Aashish-FE-WD.github.io/Cars-rental",
+  
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.1",
     "@testing-library/dom": "^10.4.0",
